@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@payloadcms/bundler-webpack": "^1.0.0",
+    "@payloadcms/db-mongodb": "^1.7.1",
     "@payloadcms/db-postgres": "^0.x",
     "@payloadcms/plugin-cloud": "^3.0.0",
     "@payloadcms/plugin-nested-docs": "^1.0.8",
@@ -37,6 +38,7 @@
     "next": "13.5.2",
     "payload": "^2.25.0",
     "payload-admin-bar": "^1.0.6",
+    "pg": "^8.12.0",
     "qs": "6.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

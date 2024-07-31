@@ -24,7 +24,7 @@ services:
     volumes:
       - data:/data/db
     logging:
-      driver: none
+      driver: json-file
 
 volumes:
   data:
