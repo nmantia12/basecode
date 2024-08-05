@@ -29,6 +29,7 @@ const start = async (): Promise<void> => {
     process.exit()
   }
 
+
   if (process.env.NEXT_BUILD) {
     app.listen(PORT, async () => {
       payload.logger.info(`Next.js is now building...`)

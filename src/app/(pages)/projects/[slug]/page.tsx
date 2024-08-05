@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import { Project } from '../../../../payload/payload-types'
+import type { Project } from '../../../../payload/payload-types'
 import { fetchDoc } from '../../../_api/fetchDoc'
 import { fetchDocs } from '../../../_api/fetchDocs'
 import { RelatedPosts } from '../../../_blocks/RelatedPosts'
@@ -12,7 +12,7 @@ import { ProjectHero } from '../../../_heros/ProjectHero'
 import { generateMeta } from '../../../_utilities/generateMeta'
 
 // Force this page to be dynamic so that Next.js does not cache it
-// See the note in '../../../[slug]/page.tsx' about this
+// See the note in '../../../../[slug]/page.tsx' about this
 export const dynamic = 'force-dynamic'
 
 export default async function Project({ params: { slug } }) {
@@ -29,6 +29,8 @@ export default async function Project({ params: { slug } }) {
   } catch (error) {
     console.error(error) // eslint-disable-line no-console
   }
+
+  console.log('project', project)
 
   if (!project) {
     notFound()
