@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CheckboxField } from '@payloadcms/plugin-form-builder/dist/types'
+import { CheckboxField } from 'payload-plugin-form-builder/dist/types'
 import { UseFormRegister, FieldErrorsImpl, FieldValues } from 'react-hook-form'
 import { Check } from '../../../_components/icons/Check'
 import { Error } from '../Error'
@@ -33,7 +33,7 @@ export const Checkbox: React.FC<
   const isCheckboxChecked = getValues(name)
 
   return (
-    <Width width={`${width}`}>
+    <Width width={width}>
       <div className={[classes.checkbox, checked && classes.checked].filter(Boolean).join(' ')}>
         <div className={classes.container}>
           <input

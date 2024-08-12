@@ -2,7 +2,7 @@ import * as React from 'react'
 import classes from './index.module.scss'
 
 export const Width: React.FC<{
-  width?: string
+  width?: number
   children: React.ReactNode
 }> = ({ width, children }) => {
   return (
