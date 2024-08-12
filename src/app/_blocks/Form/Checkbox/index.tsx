@@ -33,7 +33,7 @@ export const Checkbox: React.FC<
   const isCheckboxChecked = getValues(name)
 
   return (
-    <Width width={width}>
+    <Width width={`${width}`}>
       <div className={[classes.checkbox, checked && classes.checked].filter(Boolean).join(' ')}>
         <div className={classes.container}>
           <input
