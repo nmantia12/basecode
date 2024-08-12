@@ -34,7 +34,6 @@ export const Blocks: React.FC<{
     return (
       <Fragment>
         {blocks.map((block, index) => {
-
           const { blockName, blockType } = block
 
           if (blockType && blockType in blockComponents) {
