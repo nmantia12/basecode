@@ -1,10 +1,11 @@
 import React from 'react'
+import { Control, Controller, FieldErrorsImpl, FieldValues } from 'react-hook-form'
 import ReactSelect from 'react-select'
 import { StateField } from '@payloadcms/plugin-form-builder/dist/types'
-import { Controller, Control, FieldValues, FieldErrorsImpl } from 'react-hook-form'
-import { stateOptions } from './options'
+
 import { Error } from '../Error'
 import { Width } from '../Width'
+import { stateOptions } from './options'
 
 import classes from './index.module.scss'
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import { FieldErrorsImpl, FieldValues, UseFormRegister } from 'react-hook-form'
 import { EmailField } from '@payloadcms/plugin-form-builder/dist/types'
-import { UseFormRegister, FieldValues, FieldErrorsImpl } from 'react-hook-form'
+
 import { Error } from '../Error'
 import { Width } from '../Width'
 

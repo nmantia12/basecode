@@ -1,14 +1,15 @@
 'use client'
 
-import React, { useState, useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { Form as FormType } from '@payloadcms/plugin-form-builder/dist/types'
+import { useRouter } from 'next/router'
+
+import { Button } from '../../_components/Button'
+import { Gutter } from '../../_components/Gutter'
+import RichText from '../../_components/RichText'
 import { buildInitialFormState } from './buildInitialFormState'
 import { fields } from './fields'
-import { Form as FormType } from '@payloadcms/plugin-form-builder/dist/types'
-import RichText from '../../_components/RichText'
-import { useForm } from 'react-hook-form'
-import { useRouter } from 'next/router'
-import { Gutter } from '../../_components/Gutter'
-import { Button } from '../../_components/Button'
 
 import classes from './index.module.scss'
 
@@ -148,7 +149,6 @@ export const FormBlock: React.FC<
                 formFromProps.fields &&
                 formFromProps.fields.map((field, index) => {
                   const Field: React.FC<any> = fields?.[field.blockType]
-                  console.log(field)
                   if (Field) {
                     return (
                       <React.Fragment key={index}>

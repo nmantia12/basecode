@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { FieldErrorsImpl, FieldValues, UseFormRegister } from 'react-hook-form'
 import { CheckboxField } from '@payloadcms/plugin-form-builder/dist/types'
-import { UseFormRegister, FieldErrorsImpl, FieldValues } from 'react-hook-form'
+
 import { Check } from '../../../_components/icons/Check'
 import { Error } from '../Error'
 import { Width } from '../Width'

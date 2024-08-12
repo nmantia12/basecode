@@ -1,6 +1,7 @@
 import { webpackBundler } from '@payloadcms/bundler-webpack' // bundler-import
 import { mongooseAdapter } from '@payloadcms/db-mongodb' // database-adapter-import
 import { payloadCloud } from '@payloadcms/plugin-cloud'
+import formBuilder from '@payloadcms/plugin-form-builder'
 import nestedDocs from '@payloadcms/plugin-nested-docs'
 import redirects from '@payloadcms/plugin-redirects'
 import seo from '@payloadcms/plugin-seo'
@@ -9,7 +10,6 @@ import { slateEditor } from '@payloadcms/richtext-slate' // editor-import
 import dotenv from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
-import formBuilder from '@payloadcms/plugin-form-builder'
 
 import Categories from './collections/Categories'
 // import Comments from './collections/Comments'
@@ -110,8 +110,8 @@ export default buildConfig({
         checkbox: true,
         number: true,
         message: true,
-        payment: false
-      }
-    })
+        payment: false,
+      },
+    }),
   ],
 })
