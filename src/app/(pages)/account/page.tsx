@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-import { fetchComments } from '../../_api/fetchComments'
+// import { fetchComments } from '../../_api/fetchComments'
 import { Button } from '../../_components/Button'
 import { Gutter } from '../../_components/Gutter'
 import { HR } from '../../_components/HR'
@@ -22,9 +22,9 @@ export default async function Account() {
     )}&redirect=${encodeURIComponent('/account')}`,
   })
 
-  const comments = await fetchComments({
-    user: user?.id,
-  })
+  // const comments = await fetchComments({
+  //   user: user?.id,
+  // })
 
   return (
     <Fragment>
@@ -70,7 +70,7 @@ export default async function Account() {
           These are the comments you have placed over time. Each comment is associated with a
           specific post. All comments must be approved by an admin before they appear on the site.
         </p>
-        <HR />
+        {/* <HR />
         {comments?.length === 0 && <p>You have not made any comments yet.</p>}
         {comments.length > 0 &&
           comments?.map((com, index) => {
@@ -96,7 +96,7 @@ export default async function Account() {
                 {index < comments.length - 1 && <HR />}
               </Fragment>
             )
-          })}
+          })} */}
         <HR />
         <Button href="/logout" appearance="secondary" label="Log out" />
       </Gutter>

@@ -30,8 +30,6 @@ export default async function Project({ params: { slug } }) {
     console.error(error) // eslint-disable-line no-console
   }
 
-  console.log('project', project)
-
   if (!project) {
     notFound()
   }

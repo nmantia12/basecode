@@ -9,16 +9,17 @@ import { slateEditor } from '@payloadcms/richtext-slate' // editor-import
 import dotenv from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
+import formBuilder from '@payloadcms/plugin-form-builder'
 
 import Categories from './collections/Categories'
-import Comments from './collections/Comments'
+// import Comments from './collections/Comments'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
 import { Projects } from './collections/Projects'
 import Users from './collections/Users'
-import BeforeDashboard from './components/BeforeDashboard'
-import BeforeLogin from './components/BeforeLogin'
+// import BeforeDashboard from './components/BeforeDashboard'
+// import BeforeLogin from './components/BeforeLogin'
 import { seed } from './endpoints/seed'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
@@ -39,10 +40,10 @@ export default buildConfig({
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.
-      beforeLogin: [BeforeLogin],
+      // beforeLogin: [BeforeLogin],
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
-      beforeDashboard: [BeforeDashboard],
+      // beforeDashboard: [BeforeDashboard],
     },
     webpack: config => ({
       ...config,
@@ -66,7 +67,7 @@ export default buildConfig({
   }),
   // database-adapter-config-end
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments],
+  collections: [Pages, Posts, Projects, Media, Categories, Users],
   globals: [Settings, Header, Footer],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -98,5 +99,19 @@ export default buildConfig({
       uploadsCollection: 'media',
     }),
     payloadCloud(),
+    formBuilder({
+      fields: {
+        text: true,
+        textarea: true,
+        select: true,
+        email: true,
+        state: true,
+        country: true,
+        checkbox: true,
+        number: true,
+        message: true,
+        payment: false
+      }
+    })
   ],
 })

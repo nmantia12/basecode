@@ -25,6 +25,7 @@
     "@payloadcms/db-mongodb": "^1.7.1",
     "@payloadcms/db-postgres": "^0.x",
     "@payloadcms/plugin-cloud": "^3.0.0",
+    "@payloadcms/plugin-form-builder": "^1.2.2",
     "@payloadcms/plugin-nested-docs": "^1.0.8",
     "@payloadcms/plugin-redirects": "^1.0.0",
     "@payloadcms/plugin-seo": "^1.0.10",
@@ -75,6 +76,7 @@
     "typescript": "^4.8.4"
   },
   "resolutions": {
+    "wrap-ansi": "7.0.0",
     "string-width": "4.2.3"
   }
 }

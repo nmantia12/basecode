@@ -34,11 +34,23 @@ export async function Header() {
               And so `@media (prefers-color-scheme: dark)` will not work
               Instead, we just use CSS to invert the color via `filter: invert(1)` based on `[data-theme="dark"]`
             */}
-            <img
-              className={classes.logo}
-              alt="Payload Logo"
-              src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
-            />
+            <svg viewBox="0 0 47.7 37.8" className={classes.logo}>
+              <title>NMD Logo</title>
+              <g>
+                <polygon
+                  points="47.7,0 11.1,0 14.6,4.7 43.1,4.7 43.1,33.2 35.3,33.2 38.6,37.8 47.7,37.8"
+                />
+                <polygon
+                  points="4.6,33.2 4.6,4.7 10.1,4.7 6.7,0 0,0 0,37.8 34.2,37.8 30.9,33.2"
+                />
+                <polygon
+                  points="9.3,9.3 9.3,28.5 13.9,28.5 13.9,17.6 21.9,28.5 27.5,28.5 15.3,11.8 13.5,9.3"
+                />
+                <polygon
+                  points="33.8,17.3 33.8,28.5 38.4,28.5 38.4,9.3 33.5,9.3 28.9,16 24.1,9.3 17.9,9.3 20.9,13.4 27.3,22.2 30.5,22.2"
+                />
+              </g>
+            </svg>
           </Link>
           <HeaderNav header={header} />
         </Gutter>

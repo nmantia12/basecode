@@ -10,6 +10,7 @@ import { RelatedPosts, type RelatedPostsProps } from '../../_blocks/RelatedPosts
 import { toKebabCase } from '../../_utilities/toKebabCase'
 import { BackgroundColor } from '../BackgroundColor'
 import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding'
+import { FormBlock } from '../../_blocks/Form'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -18,6 +19,7 @@ const blockComponents = {
   archive: ArchiveBlock,
   relatedPosts: RelatedPosts,
   comments: CommentsBlock,
+  formBlock: FormBlock,
 }
 
 export const Blocks: React.FC<{
@@ -32,6 +34,8 @@ export const Blocks: React.FC<{
     return (
       <Fragment>
         {blocks.map((block, index) => {
+          console.log(block)
+
           const { blockName, blockType } = block
 
           if (blockType && blockType in blockComponents) {
