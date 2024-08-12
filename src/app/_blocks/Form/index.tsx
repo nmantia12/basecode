@@ -166,7 +166,7 @@ export const FormBlock: React.FC<
                   return null
                 })}
             </div>
-            <Button label={submitButtonLabel} appearance="primary" el="button" form={formID} />
+            <Button label={submitButtonLabel} appearance="primary" el="button" />
           </form>
         )}
       </div>
