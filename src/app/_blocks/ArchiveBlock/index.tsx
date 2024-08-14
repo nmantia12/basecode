@@ -10,6 +10,7 @@ import classes from './index.module.scss'
 export const ArchiveBlock: React.FC<
   ArchiveBlockProps & {
     id?: string
+    gutters?: boolean
   }
 > = props => {
   const {
