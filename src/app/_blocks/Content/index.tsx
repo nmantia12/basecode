@@ -4,6 +4,7 @@ import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import RichText from '../../_components/RichText'
+import { Blocks } from '../../_components/Blocks'
 
 import classes from './index.module.scss'
 
@@ -22,12 +23,12 @@ export const ContentBlock: React.FC<
         {columns &&
           columns.length > 0 &&
           columns.map((col, index) => {
-            const { enableLink, richText, link, size } = col
-
+            const { enableLink, richText, link, size, blocks } = col
             return (
               <div key={index} className={[classes.column, classes[`column--${size}`]].join(' ')}>
-                <RichText content={richText} />
+                {richText && <RichText content={richText} />}
                 {enableLink && <CMSLink className={classes.link} {...link} />}
+                {blocks && blocks.length > 0 && <Blocks gutters={false} blocks={blocks} disableTopPadding={true} />}
               </div>
             )
           })}

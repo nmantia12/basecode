@@ -25,8 +25,9 @@ const blockComponents = {
 export const Blocks: React.FC<{
   blocks: (Page['layout'][0] | RelatedPostsProps | CommentsBlockProps)[]
   disableTopPadding?: boolean
+  gutters?: boolean
 }> = props => {
-  const { disableTopPadding, blocks } = props
+  const { disableTopPadding, blocks, gutters } = props
 
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
 
@@ -69,7 +70,7 @@ export const Blocks: React.FC<{
                 <BackgroundColor key={index} invert={blockIsInverted}>
                   <VerticalPadding top={paddingTop} bottom={paddingBottom}>
                     {/* @ts-expect-error */}
-                    <Block id={toKebabCase(blockName)} {...block} />
+                    <Block gutters={gutters} id={toKebabCase(blockName)} {...block} />
                   </VerticalPadding>
                 </BackgroundColor>
               )

@@ -13,10 +13,11 @@ type Props = Extract<Page['layout'][0], { blockType: 'cta' }>
 export const CallToActionBlock: React.FC<
   Props & {
     id?: string
+    gutters?: boolean
   }
-> = ({ links, richText, invertBackground }) => {
+> = ({ links, richText, invertBackground, gutters }) => {
   return (
-    <Gutter>
+    <Gutter left={!gutters && false } right={!gutters && false }>
       <VerticalPadding
         className={[classes.callToAction, invertBackground && classes.invert]
           .filter(Boolean)

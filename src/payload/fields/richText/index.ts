@@ -96,7 +96,7 @@ const richText: RichText = (
     {
       name: 'richText',
       type: 'richText',
-      required: true,
+      required: false,
       editor: slateEditor({
         admin: slateOptions,
       }),

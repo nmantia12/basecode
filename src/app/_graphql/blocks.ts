@@ -15,19 +15,6 @@ export const CALL_TO_ACTION = `
 }
 `
 
-export const CONTENT = `
-...on Content {
-  blockType
-  invertBackground
-  columns {
-    size
-    richText
-    enableLink
-    link ${LINK_FIELDS()}
-  }
-}
-`
-
 export const MEDIA_BLOCK = `
 ...on MediaBlock {
   blockType
@@ -89,5 +76,23 @@ export const ARCHIVE_BLOCK = `
     }
   }
   populatedDocsTotal
+}
+`
+
+export const CONTENT = `
+...on Content {
+  blockType
+  invertBackground
+  columns {
+    size
+    richText
+    enableLink
+    link ${LINK_FIELDS()}
+    blocks {
+      ${CALL_TO_ACTION}
+      ${MEDIA_BLOCK}
+      ${ARCHIVE_BLOCK}
+    }
+  }
 }
 `

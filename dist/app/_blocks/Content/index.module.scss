@@ -40,3 +40,10 @@
 .link {
   margin-top: var(--base);
 }
+
+img {
+  max-width: none;
+    height: inherit;
+    display: block;
+    width: inherit;
+}
