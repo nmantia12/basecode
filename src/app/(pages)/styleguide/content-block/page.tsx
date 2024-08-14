@@ -29,7 +29,7 @@ export default async function ContentBlockPage() {
                   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                 },
               ],
-              blocks:[]
+              blocks: [],
             },
           ]}
         />
