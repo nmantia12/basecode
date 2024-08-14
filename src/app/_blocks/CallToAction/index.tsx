@@ -17,7 +17,7 @@ export const CallToActionBlock: React.FC<
   }
 > = ({ links, richText, invertBackground, gutters }) => {
   return (
-    <Gutter left={!gutters && false } right={!gutters && false }>
+    <Gutter left={!gutters && false} right={!gutters && false}>
       <VerticalPadding
         className={[classes.callToAction, invertBackground && classes.invert]
           .filter(Boolean)

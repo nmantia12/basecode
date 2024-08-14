@@ -28,12 +28,12 @@ export const MediaBlock: React.FC<Props> = props => {
         </div>
       )}
       {position === 'default' && (
-        <Gutter left={!gutters && false } right={!gutters && false }>
+        <Gutter left={!gutters && false} right={!gutters && false}>
           <Media resource={media} src={staticImage} />
         </Gutter>
       )}
       {caption && (
-        <Gutter className={classes.caption} left={!gutters && false } right={!gutters && false }>
+        <Gutter className={classes.caption} left={!gutters && false} right={!gutters && false}>
           <RichText content={caption} />
         </Gutter>
       )}

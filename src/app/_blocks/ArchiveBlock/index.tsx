@@ -22,13 +22,13 @@ export const ArchiveBlock: React.FC<
     populatedDocsTotal,
     selectedDocs,
     categories,
-    gutters
+    gutters,
   } = props
 
   return (
     <div id={`block-${id}`} className={classes.archiveBlock}>
       {introContent && (
-        <Gutter className={classes.introContent}  left={!gutters && false } right={!gutters && false }>
+        <Gutter className={classes.introContent} left={!gutters && false} right={!gutters && false}>
           <RichText content={introContent} />
         </Gutter>
       )}
