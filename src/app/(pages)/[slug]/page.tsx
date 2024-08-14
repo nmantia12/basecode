@@ -4,7 +4,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 import type { Page } from '../../../payload/payload-types'
-import { staticHome } from '../../../payload/seed/home-static'
+// import { staticHome } from '../../../payload/seed/home-static'
 import { fetchDoc } from '../../_api/fetchDoc'
 import { fetchDocs } from '../../_api/fetchDocs'
 import { Blocks } from '../../_components/Blocks'
@@ -40,9 +40,9 @@ export default async function Page({ params: { slug = 'home' } }) {
   // if no `home` page exists, render a static one using dummy content
   // you should delete this code once you have a home page in the CMS
   // this is really only useful for those who are demoing this template
-  if (!page && slug === 'home') {
-    page = staticHome
-  }
+  // if (!page && slug === 'home') {
+  //   page = staticHome
+  // }
 
   if (!page) {
     return notFound()
@@ -88,9 +88,9 @@ export async function generateMetadata({ params: { slug = 'home' } }): Promise<M
     // in production you may want to redirect to a 404  page or at least log the error somewhere
   }
 
-  if (!page) {
-    if (slug === 'home') page = staticHome
-  }
+  // if (!page) {
+  //   if (slug === 'home') page = staticHome
+  // }
 
   return generateMeta({ doc: page })
 }
