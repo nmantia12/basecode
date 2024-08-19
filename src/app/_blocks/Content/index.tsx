@@ -70,7 +70,7 @@ export const ContentBlock: React.FC<
                         }
 
                         if (index === blocks.length - 1) {
-                          paddingBottom = 'large'
+                          paddingBottom = 'none'
                         }
 
                         if (index === 0) {
